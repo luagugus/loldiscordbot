@@ -10,7 +10,7 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         if message.content.startswith("!검색"):
-            value = message.content.replace('!검색', '')
+            value = message.content.replace('!검색 ', '')
             me = watcher.summoner.by_name(my_region, value)
             t = me['name']
             c = me['summonerLevel']
